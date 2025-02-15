@@ -12,6 +12,7 @@
 body {
     min-height: 100vh;
     background: url(01.jpg) center/cover no-repeat;
+width: 100%;
 }
 
 #menu-toggle{
@@ -51,13 +52,14 @@ body {
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+min-width: 100%;
+    grid-template-columns: repeat(6, 1fr);
    /* background: red; */
-   height: 90%;
+   height: 100%;
 }
 .container .title {
-    grid-column: 1 / -1;
-   padding: 13rem 0 0 7rem;
+    grid-column: 2 / -1;
+   padding: 13rem 0 0 0;
 }
 .container .title h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -87,12 +89,12 @@ font-size: clamp(0.5rem, -0.14102564102564108rem + 2.735042735042735vw, 1.5rem);
 .list{
     color: aliceblue;
 /* background: red; */
-grid-column: 1 / -1;
+grid-column: 2 / -1;
 height: 6rem;
 }
 .list ul{
     display: flex;
-    padding: 3rem 0 0 7rem;
+    padding: 3rem 0 0 0rem;
     gap: 30px;
     font-size: 1.1rem;
     font-weight: 700;
@@ -139,11 +141,11 @@ opacity: 0;
     opacity: 100%;
 }
 .icons{
-   
+   grid-column: 2 / -1;
     color: white;
 font-size: 1.3rem;
     width: 35%;
-    margin: 0 0 0 90px;
+    padding: 40px 0 0 40px;
     height: 5rem;
     /* background-color: red; */
 }
@@ -177,12 +179,26 @@ font-size: 1.3rem;
     .sidebar .navigation a {
         font-size: 1.1rem;
     }
+    .list ul{
+        display: none;
+    }
+   .title h3{
+
+   }
+   /* .title p{ */
+    padding-top: 30px;
+    padding-left: 120px;
+    height: 90px;
+   }
+   /* .icons{
+    width: 89%;
+    position: relative;
+    left: 220px;
+   } */
 }
 @media (max-width:40em){
     body{
         background:url(retouch_2025011212255468.jpg) center no-repeat fixed ;
         background-size: cover ;
-
-      
         }
     }
